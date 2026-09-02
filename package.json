@@ -1,0 +1,9 @@
+{
+  "name": "gamelist-data-builder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build-data": "node scripts/build-data.mjs"
+  },
+  "dependencies": {}
+}

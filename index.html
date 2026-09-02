@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>電子遊戲櫃 :: game_shelf.sh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0a0a;
+    --fg: #33ff00;
+    --amber: #ffb000;
+    --muted: #1f521f;
+    --border: #1f521f;
+    --error: #ff3333;
+    --black: #000000;
+    --mono: 'JetBrains Mono', 'Noto Sans Mono TC', 'Cascadia Code', ui-monospace, Consolas, monospace;
+    --plat-switch:#e60012; --plat-ps5:#0070d1;
+    --fmt-physical:#ffb000; --fmt-digital:#33ff00;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg); color: var(--fg); font-family: var(--mono);
+    min-height:100vh; line-height:1.5; position:relative;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:999; pointer-events:none;
+    background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode: overlay;
+  }
+  a{ color: var(--amber); text-decoration:none; }
+  a:hover{ color:#fff; text-shadow:0 0 6px rgba(255,176,0,.7); }
+  ::selection{ background: var(--fg); color:#000; }
+
+  header.top{ padding: 26px clamp(16px,4vw,48px) 18px; border-bottom: 1px dashed var(--border); }
+  .prompt-line{ color: var(--muted); font-size: 12.5px; letter-spacing:.5px; margin-bottom: 10px; }
+  .prompt-line .path{ color: var(--fg); }
+  .brand{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .brand .glyph{ display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border:1px solid var(--fg); color:var(--fg); font-weight:800; font-size:18px; background:transparent; }
+  .brand h1{ font-weight:800; font-size:clamp(22px,4vw,32px); margin:0; text-transform:uppercase; letter-spacing:2px; color:var(--fg); text-shadow: 0 0 6px rgba(51,255,0,.55), 0 0 18px rgba(51,255,0,.25); }
+  .brand h1 .cursor{ display:inline-block; width:.55ch; background:var(--fg); animation: blink 1s steps(1) infinite; margin-left:2px; transform: translateY(2px); }
+  @keyframes blink{ 50%{ opacity:0; } }
+  .subline{ color: var(--muted); margin-top:10px; font-size:13px; max-width:74ch; }
+  .subline::before{ content:"# "; }
+
+  .controls{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:20px; }
+  .controls input[type=text]{ flex:1 1 320px; min-width:200px; background: var(--black); border:1px solid var(--border); color: var(--fg); padding:9px 12px; border-radius:0; font-size:13.5px; font-family:var(--mono); caret-color: var(--fg); }
+  .controls input[type=text]::placeholder{ color: var(--muted); }
+  .controls input[type=text]:focus{ outline:none; border-color: var(--fg); box-shadow:0 0 0 1px var(--fg); }
+  .btn{ appearance:none; border:1px solid var(--fg); background:transparent; color: var(--fg); padding:9px 14px; border-radius:0; font-size:13px; cursor:pointer; font-family:var(--mono); font-weight:700; text-transform:uppercase; letter-spacing:1px; transition: background .1s, color .1s; white-space:nowrap; }
+  .btn:hover{ background: var(--fg); color:#000; }
+  .btn.ghost{ border-color: var(--muted); color: var(--muted); }
+  .btn.ghost:hover{ background: var(--muted); color:#000; border-color:var(--muted); }
+  .view-toggle{ display:flex; border:1px solid var(--fg); }
+  .view-toggle button{ border:none; background:transparent; color: var(--fg); padding:9px 14px; cursor:pointer; font-family:var(--mono); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+  .view-toggle button + button{ border-left:1px solid var(--fg); }
+  .view-toggle button.active{ background: var(--fg); color:#000; }
+
+  .filter-groups{ display:flex; flex-direction:column; gap:9px; margin-top:16px; }
+  .filter-row{ display:flex; align-items:flex-start; gap:10px; flex-wrap:wrap; }
+  .filter-label{ flex:none; font-size:12px; color: var(--muted); font-weight:700; padding:8px 0; min-width:60px; text-transform:uppercase; letter-spacing:1px; }
+  .filter-label::before{ content:"--"; margin-right:3px; }
+  .chips{ display:flex; gap:8px; flex-wrap:wrap; }
+  .chip{ border:1px solid var(--border); background:transparent; color: var(--muted); padding:5px 11px; border-radius:0; font-size:12.5px; cursor:pointer; user-select:none; display:flex; align-items:center; gap:6px; transition:all .1s; font-family:var(--mono); }
+  .chip::before{ content:"["; }
+  .chip::after{ content:"]"; }
+  .chip .dot{ width:7px; height:7px; border-radius:0; flex:none; }
+  .chip.active{ color: var(--fg); border-color: var(--fg); text-shadow:0 0 5px rgba(51,255,0,.5); }
+  .chip:hover{ border-color: var(--fg); color: var(--fg); }
+
+  main{ padding: 22px clamp(16px,4vw,48px) 64px; }
+  .status{ color: var(--muted); font-size:12.5px; margin-bottom:16px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .status::before{ content:"$"; color:var(--fg); margin-right:2px; }
+  .status .err{ color: var(--error); }
+  .spinner{ width:9px; height:9px; background: var(--fg); animation: blink .6s steps(1) infinite; display:inline-block; }
+
+  #grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:16px; }
+  .card{ background: var(--black); border:1px solid var(--border); border-radius:0; overflow:hidden; display:flex; flex-direction:column; transition: border-color .12s; }
+  .card:hover{ border-color: var(--fg); }
+  .card .titlebar{ border-bottom:1px dashed var(--border); padding:5px 9px; font-size:10.5px; color: var(--muted); display:flex; justify-content:space-between; letter-spacing:.5px; }
+  .card .cover{ aspect-ratio:3/4; background:#050505; position:relative; overflow:hidden; border-bottom:1px dashed var(--border); }
+  .card .cover img{ width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(.1) contrast(1.05); }
+  .cover .fallback{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:34px; color: var(--muted); background: repeating-linear-gradient(45deg, #0d0d0d, #0d0d0d 10px, #050505 10px, #050505 20px); text-align:center; padding:10px; }
+  .plat-tag{ position:absolute; top:8px; left:8px; padding:2px 8px; border-radius:0; font-size:10.5px; font-weight:700; background:#000; border:1px solid; text-transform:uppercase; letter-spacing:.5px; }
+  .fmt-tag{ position:absolute; top:8px; right:8px; padding:2px 8px; border-radius:0; font-size:10px; font-weight:700; background:#000; border:1px solid; text-transform:uppercase; letter-spacing:.5px; }
+  .card .body{ padding:11px 12px 13px; display:flex; flex-direction:column; gap:7px; flex:1; }
+  .card h3{ font-weight:700; font-size:15px; margin:0; line-height:1.35; color: var(--fg); }
+  .card h3 a:hover{ text-decoration:underline; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; font-size:11.5px; color: var(--muted); }
+  .genre-tag{ display:inline-block; }
+  .publisher{ font-size:11px; color: var(--muted); }
+  .publisher::before{ content:"dev: "; }
+  .released{ font-size:11px; color: var(--muted); }
+  .released::before{ content:"rel: "; }
+  .note{ font-size:11.5px; color: var(--error); margin-top:auto; padding-top:6px; border-top:1px dashed var(--border); }
+  .note::before{ content:"[!] "; }
+
+  #grid.list-view{ display:flex; flex-direction:column; gap:8px; }
+  #grid.list-view .card{ flex-direction:row; }
+  #grid.list-view .card .titlebar{ display:none; }
+  #grid.list-view .card .cover{ width:72px; aspect-ratio:3/4; flex:none; border-bottom:none; border-right:1px dashed var(--border); }
+  #grid.list-view .card .body{ padding:10px 14px; }
+  #grid.list-view .card h3{ font-size:14px; }
+
+  .empty, .error-box{ padding:36px 20px; text-align:center; color: var(--muted); border:1px dashed var(--border); border-radius:0; font-size:13px; font-family:var(--mono); }
+  .empty::before{ content:"[ NO_RESULTS ]\A"; white-space:pre; display:block; color:var(--error); margin-bottom:8px; }
+  .error-box{ color: var(--error); border-color: var(--error); }
+
+  footer{ text-align:center; color: var(--muted); font-size:11.5px; padding:28px 16px 40px; border-top:1px dashed var(--border); }
+  footer::before{ content:"EOF"; display:block; margin-bottom:10px; letter-spacing:3px; color:var(--border); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="prompt-line">user@<span class="path">game-shelf</span>:~$ ./launch.sh</div>
+  <div class="brand">
+    <span class="glyph">#</span>
+    <h1>電子遊戲櫃<span class="cursor">_</span></h1>
+  </div>
+  <p class="subline">資料每天由 GitHub Actions 自動從 Google Sheet + RAWG 更新一次，網頁本身完全不對外連線。</p>
+
+  <div class="controls" id="mainControls" style="display:none;">
+    <input type="text" id="searchBox" placeholder="grep --title=...">
+    <div class="view-toggle">
+      <button id="btnGrid" class="active">[ GRID ]</button>
+      <button id="btnList">[ LIST ]</button>
+    </div>
+    <button class="btn ghost" id="btnClearFilter">[ CLEAR ]</button>
+  </div>
+
+  <div class="filter-groups" id="filterGroups" style="display:none;">
+    <div class="filter-row"><span class="filter-label">platform</span><div class="chips" id="chipsPlatform"></div></div>
+    <div class="filter-row"><span class="filter-label">genre</span><div class="chips" id="chipsGenre"></div></div>
+    <div class="filter-row"><span class="filter-label">format</span><div class="chips" id="chipsFormat"></div></div>
+  </div>
+</header>
+
+<main>
+  <div class="status" id="statusLine" style="display:none;"></div>
+  <div id="grid"></div>
+</main>
+
+<footer>
+  data source :: Google Sheet + game cover data from <a href="https://rawg.io" target="_blank" rel="noopener">RAWG.io</a>
+</footer>
+
+<script>
+(function(){
+  const PLAT_COLORS = { 'Switch':'var(--plat-switch)', 'PS5':'var(--plat-ps5)' };
+  const FMT_COLORS = { '實體':'var(--fmt-physical)', '數位':'var(--fmt-digital)' };
+  const DEFAULT_COLOR = '#5a5a5a';
+
+  let ALL_GAMES = [];
+  let activePlatforms = new Set();
+  let activeGenres = new Set();
+  let activeFormats = new Set();
+  let viewMode = 'grid';
+
+  function toggleSetValue(set, val){ if(set.has(val)) set.delete(val); else set.add(val); }
+  function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  function renderChips(){
+    const platCounts = {};
+    ALL_GAMES.forEach(g => (g.platforms||[]).forEach(p => { platCounts[p] = (platCounts[p]||0)+1; }));
+    let platHtml = '';
+    Object.keys(platCounts).sort().forEach(p=>{
+      const active = activePlatforms.has(p);
+      const color = PLAT_COLORS[p] || DEFAULT_COLOR;
+      platHtml += `<div class="chip ${active?'active':''}" data-group="plat" data-val="${escapeHtml(p)}" style="${active?`color:${color};border-color:${color}`:''}">
+        <span class="dot" style="background:${color}"></span>${escapeHtml(p)} <b>${platCounts[p]}</b></div>`;
+    });
+    document.getElementById('chipsPlatform').innerHTML = platHtml;
+
+    const genreCounts = {};
+    ALL_GAMES.forEach(g => { (g.genre||'').split('、').filter(Boolean).forEach(gn => { genreCounts[gn] = (genreCounts[gn]||0)+1; }); });
+    let genreHtml = '';
+    Object.keys(genreCounts).sort().forEach(gn=>{
+      const active = activeGenres.has(gn);
+      genreHtml += `<div class="chip ${active?'active':''}" data-group="genre" data-val="${escapeHtml(gn)}">${escapeHtml(gn)} <b>${genreCounts[gn]}</b></div>`;
+    });
+    document.getElementById('chipsGenre').innerHTML = genreHtml;
+
+    const fmtCounts = {};
+    ALL_GAMES.forEach(g => { if(g.format) fmtCounts[g.format] = (fmtCounts[g.format]||0)+1; });
+    let fmtHtml = '';
+    Object.keys(fmtCounts).sort().forEach(f=>{
+      const active = activeFormats.has(f);
+      const color = FMT_COLORS[f] || DEFAULT_COLOR;
+      fmtHtml += `<div class="chip ${active?'active':''}" data-group="fmt" data-val="${escapeHtml(f)}" style="${active?`color:${color};border-color:${color}`:''}">${escapeHtml(f)} <b>${fmtCounts[f]}</b></div>`;
+    });
+    document.getElementById('chipsFormat').innerHTML = fmtHtml;
+
+    document.getElementById('filterGroups').style.display = 'flex';
+    document.getElementById('filterGroups').querySelectorAll('.chip').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const group = el.dataset.group;
+        const val = el.dataset.val;
+        if(group==='plat') toggleSetValue(activePlatforms, val);
+        else if(group==='genre') toggleSetValue(activeGenres, val);
+        else if(group==='fmt') toggleSetValue(activeFormats, val);
+        renderChips();
+        renderGrid();
+      });
+    });
+  }
+
+  function cardHtml(g, idx){
+    const cover = g.image
+      ? `<img src="${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=fallback>${escapeHtml(g.title.slice(0,10))}</div>'">`
+      : `<div class="fallback">${escapeHtml(g.title.slice(0,10))}</div>`;
+    const platHtml = (g.platforms||[]).map(p=>{
+      const color = PLAT_COLORS[p] || DEFAULT_COLOR;
+      return `<span class="plat-tag" style="color:${color};border-color:${color}">${escapeHtml(p)}</span>`;
+    }).join('');
+    const fmtColor = FMT_COLORS[g.format] || DEFAULT_COLOR;
+    const fmtHtml = g.format ? `<span class="fmt-tag" style="color:${fmtColor};border-color:${fmtColor}">${escapeHtml(g.format)}</span>` : '';
+    const genreHtml = g.genre ? `<div class="meta-row"><span class="genre-tag">${escapeHtml(g.genre)}</span></div>` : '';
+    const titleInner = g.rawgSlug
+      ? `<a href="https://rawg.io/games/${escapeHtml(g.rawgSlug)}" target="_blank" rel="noopener">${escapeHtml(g.title)}</a>`
+      : escapeHtml(g.title);
+    const idTag = String(idx).padStart(3,'0');
+
+    return `<div class="card">
+      <div class="titlebar"><span>#${idTag}</span><span>${g.released || 'local'}</span></div>
+      <div class="cover">${cover}${platHtml}${fmtHtml}</div>
+      <div class="body">
+        <h3>${titleInner}</h3>
+        ${genreHtml}
+        ${g.publisher ? `<div class="publisher">${escapeHtml(g.publisher)}</div>` : ''}
+        ${g.note ? `<div class="note">${escapeHtml(g.note)}</div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  function renderGrid(){
+    const grid = document.getElementById('grid');
+    const q = (document.getElementById('searchBox').value || '').trim().toLowerCase();
+    let games = ALL_GAMES;
+    if(activePlatforms.size) games = games.filter(g => (g.platforms||[]).some(p => activePlatforms.has(p)));
+    if(activeGenres.size) games = games.filter(g => (g.genre||'').split('、').some(gn => activeGenres.has(gn)));
+    if(activeFormats.size) games = games.filter(g => activeFormats.has(g.format));
+    if(q) games = games.filter(g => g.title.toLowerCase().includes(q));
+    grid.className = viewMode === 'list' ? 'list-view' : '';
+    if(!games.length){ grid.innerHTML = `<div class="empty">0 results matched query.</div>`; return; }
+    grid.innerHTML = games.map(cardHtml).join('');
+  }
+
+  function setStatus(html){
+    const el = document.getElementById('statusLine');
+    el.style.display = html ? 'flex' : 'none';
+    el.innerHTML = html;
+  }
+
+  document.getElementById('searchBox').addEventListener('input', renderGrid);
+  document.getElementById('btnGrid').addEventListener('click', ()=>{
+    viewMode='grid';
+    document.getElementById('btnGrid').classList.add('active');
+    document.getElementById('btnList').classList.remove('active');
+    renderGrid();
+  });
+  document.getElementById('btnList').addEventListener('click', ()=>{
+    viewMode='list';
+    document.getElementById('btnList').classList.add('active');
+    document.getElementById('btnGrid').classList.remove('active');
+    renderGrid();
+  });
+  document.getElementById('btnClearFilter').addEventListener('click', ()=>{
+    activePlatforms.clear(); activeGenres.clear(); activeFormats.clear();
+    document.getElementById('searchBox').value = '';
+    renderChips(); renderGrid();
+  });
+
+  async function boot(){
+    setStatus(`<span class="spinner"></span> fetching data/games.json ...`);
+    try{
+      const res = await fetch('./data/games.json', { cache:'no-store' });
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const json = await res.json();
+      ALL_GAMES = json.games || [];
+      document.getElementById('mainControls').style.display = 'flex';
+      const updated = json.updatedAt ? new Date(json.updatedAt).toLocaleString('zh-TW') : 'unknown';
+      const missing = json.missingTitles && json.missingTitles.length;
+      setStatus(`loaded ${ALL_GAMES.length} entries　//　last_sync: ${updated}` +
+        (missing ? `　//　<span class="err">${missing} titles lookup_failed</span>` : ''));
+      renderChips();
+      renderGrid();
+    }catch(e){
+      setStatus(`<span class="err">[ERR] data/games.json unreachable (${e.message}). run the GitHub Action first.</span>`);
+    }
+  }
+  boot();
+})();
+</script>
+</body>
+</html>
