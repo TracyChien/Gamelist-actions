@@ -1,7 +1,9 @@
 {
-  "updatedAt": "2026-09-02T20:21:52.586Z",
+  "updatedAt": "2026-09-03T20:26:57.169Z",
   "count": 135,
-  "missingTitles": [],
+  "missingTitles": [
+    "胡鬧搬家 moving out"
+  ],
   "games": [
     {
       "title": "over cooked 2",
@@ -289,13 +291,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Action、Simulation、Casual、Indie",
-      "publisher": "Team17 Digital",
-      "image": "https://media.rawg.io/media/games/726/7263e11b6bfb15abe35dcfa3b26147f5.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "275641",
-      "rawgSlug": "moving-out-2",
-      "released": "2020-04-28"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "健身環",
