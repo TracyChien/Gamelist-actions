@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T19:47:19.351Z",
+  "updatedAt": "2026-09-06T19:50:55.125Z",
   "count": 135,
   "missingTitles": [],
   "games": [
@@ -1199,13 +1199,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Action、Adventure、Platformer",
-      "publisher": "Microsoft Studios",
-      "image": "https://media.rawg.io/media/games/d76/d76bd51161884d729ceac7e98eacde80.jpg",
+      "genre": "Strategy",
+      "publisher": "Zen Studios",
+      "image": "",
       "note": "",
-      "rawgId": "486733",
-      "rawgSlug": "recore-definitive-edition-2",
-      "released": "2017-08-29"
+      "rawgId": "244736",
+      "rawgSlug": "castlestorm-definitive-edition",
+      "released": "2014-09-23"
     },
     {
       "title": "Super Mega Baseball 2: Ultimate Edition",
