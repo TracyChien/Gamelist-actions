@@ -1,7 +1,31 @@
 {
-  "updatedAt": "2026-09-14T21:14:35.724Z",
+  "updatedAt": "2026-09-15T20:43:31.444Z",
   "count": 135,
-  "missingTitles": [],
+  "missingTitles": [
+    "路易吉洋樓2 HD",
+    "薩爾達傳說 智慧的再現",
+    "宇宙機器人",
+    "樂高哈利波特合集",
+    "超級瑪利歐派對 空前盛會",
+    "瑪利歐＆路易吉RPG 兄弟齊航",
+    "桃太郎電鐵～昭和 平成 令和也是定番！",
+    "真 三國無雙 起源",
+    "雙影奇境 Split Fiction",
+    "蠟筆小新 煤炭鎮的小白",
+    "光與影：33號遠征隊",
+    "寶可夢傳說 ZA",
+    "咚奇剛 蕉力全開",
+    "人生遊戲",
+    "瑪利歐網球 狂熱",
+    "節奏天國 奇蹟之星",
+    "九張羊皮",
+    "lovers in a dangerous spacetime",
+    "超級雞馬",
+    "sports party",
+    "NBA 2K19",
+    "海賊無雙3",
+    "摩登原始人"
+  ],
   "games": [
     {
       "title": "over cooked 2",
@@ -779,13 +803,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Adventure、RPG",
-      "publisher": "AtomTeam",
-      "image": "https://media.rawg.io/media/games/279/279929185f57fb8c64dc9e3e412ed344.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
       "rawgId": "11383",
-      "rawgSlug": "atom-rpg",
-      "released": "2018-12-19"
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "路易吉洋樓2 HD",
@@ -793,13 +817,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Strategy",
-      "publisher": "Kalypso Media",
-      "image": "https://media.rawg.io/media/games/abc/abc14abd760982ce10c59837c6bde58d.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "327246",
-      "rawgSlug": "commandos-2-hd-remaster",
-      "released": "2020-01-23"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "薩爾達傳說 智慧的再現",
@@ -807,13 +831,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Action",
-      "publisher": "JW70",
-      "image": "https://media.rawg.io/media/screenshots/bec/bec66bba3c03e0159377cde912718deb.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "871090",
-      "rawgSlug": "sheng-jian-chuan-shuo",
-      "released": "2022-10-19"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "宇宙機器人",
@@ -821,13 +845,13 @@
         "PS5"
       ],
       "format": "實體",
-      "genre": "Shooter",
-      "publisher": "Prodigy Co",
-      "image": "https://media.rawg.io/media/screenshots/a73/a735457a1c2727d77e2cda85e22a7e62.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "777516",
-      "rawgSlug": "invisible-neighbors-yu-zhou-ren-xi-lai",
-      "released": "2022-04-26"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "樂高哈利波特合集",
@@ -835,13 +859,13 @@
         "PS5"
       ],
       "format": "實體",
-      "genre": "Educational",
-      "publisher": "average34",
-      "image": "https://media.rawg.io/media/screenshots/a92/a9248c8c5d564389f2e66fb2d34faf39.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "281051",
-      "rawgSlug": "ji-he-supido-featboiro",
-      "released": "2018-12-30"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "超級瑪利歐派對 空前盛會",
@@ -849,13 +873,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Action",
-      "publisher": "MRG70",
-      "image": "https://media.rawg.io/media/screenshots/d5d/d5dccc696d01d4cc5ed91e6eaf1d14f5.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "868882",
-      "rawgSlug": "pin-guo-pai-dui",
-      "released": "2022-10-19"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "瑪利歐＆路易吉RPG 兄弟齊航",
@@ -863,13 +887,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Adventure、RPG、Strategy、Casual、Indie",
-      "publisher": "橙光游戏",
-      "image": "https://media.rawg.io/media/screenshots/f10/f108579ec589b80cf88ecf7555b9cd8b.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "638660",
-      "rawgSlug": "mo-ri-hang-lu-the-termination",
-      "released": "2021-07-22"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "桃太郎電鐵～昭和 平成 令和也是定番！",
@@ -877,13 +901,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "RPG",
-      "publisher": "ロスゲブ",
-      "image": "https://media.rawg.io/media/screenshots/a83/a838cf591f49806c429b5e88e7624f8c.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "554541",
-      "rawgSlug": "tao-tai-lang",
-      "released": "2021-02-01"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "真 三國無雙 起源",
@@ -891,13 +915,13 @@
         "PS5"
       ],
       "format": "實體",
-      "genre": "Action",
-      "publisher": "Koei Tecmo Games",
-      "image": "https://media.rawg.io/media/screenshots/54f/54f40815fbb8c3296ff467d8adf9a869.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "272516",
-      "rawgSlug": "dynasty-warriors-7-xtreme-legends-definitive-editi",
-      "released": "2018-12-05"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "雙影奇境 Split Fiction",
@@ -905,13 +929,13 @@
         "PS5"
       ],
       "format": "實體",
-      "genre": "Action、Adventure",
-      "publisher": "Electronic Arts",
-      "image": "https://media.rawg.io/media/games/02a/02ac22b3b90717dabaa535640c38534c.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "994603",
-      "rawgSlug": "split-fiction",
-      "released": "2025-03-06"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "蠟筆小新 煤炭鎮的小白",
@@ -920,11 +944,11 @@
       ],
       "format": "實體",
       "genre": "",
-      "publisher": "Neos",
-      "image": "https://media.rawg.io/media/screenshots/8ef/8ef88550703774ed3935ba67b6caa5e6.jpg",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "991052",
-      "rawgSlug": "la-bi-xiao-xin-mei-tan-zhen-de-xiao-bai",
+      "rawgId": "",
+      "rawgSlug": "",
       "released": ""
     },
     {
@@ -933,13 +957,13 @@
         "PS5"
       ],
       "format": "實體",
-      "genre": "RPG",
-      "publisher": "Kepler Interactive",
-      "image": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "983210",
-      "rawgSlug": "clair-obscur-expedition-33",
-      "released": "2025-04-24"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "寶可夢傳說 ZA",
@@ -947,13 +971,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Action",
-      "publisher": "JW70",
-      "image": "https://media.rawg.io/media/screenshots/bec/bec66bba3c03e0159377cde912718deb.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "871090",
-      "rawgSlug": "sheng-jian-chuan-shuo",
-      "released": "2022-10-19"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "咚奇剛 蕉力全開",
@@ -961,13 +985,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Action",
-      "publisher": "kanafla",
-      "image": "https://media.rawg.io/media/screenshots/b41/b41ef5ff6847192f9f3a491eacf828e0.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "576212",
-      "rawgSlug": "quan-kai-tomoshikaenzin",
-      "released": "2021-03-19"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "人生遊戲",
@@ -976,12 +1000,12 @@
       ],
       "format": "實體",
       "genre": "",
-      "publisher": "tfon10920501",
-      "image": "https://media.rawg.io/media/screenshots/8a1/8a170920f06bb4db6e5933c3875ca619.jpg",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "911224",
-      "rawgSlug": "you-xi",
-      "released": "2023-01-13"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "瑪利歐網球 狂熱",
@@ -989,13 +1013,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Family、Puzzle",
-      "publisher": "ma kun",
-      "image": "https://media.rawg.io/media/screenshots/cae/caefdcf815ba79262f11928643397c52_pGSmXJF.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "252163",
-      "rawgSlug": "ai-qing-qiu-qiu-lian-ai-qiu-qiu-huan-le-qiu-qiu",
-      "released": "2018-04-26"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "節奏天國 奇蹟之星",
@@ -1003,13 +1027,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "RPG",
-      "publisher": "甲山林娛樂股份有限公司",
-      "image": "https://media.rawg.io/media/screenshots/333/3331dbca65c5b78a48474fbded153727.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "60697",
-      "rawgSlug": "tian-ming-qi-yu-fate-seeker",
-      "released": "2018-08-07"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "九張羊皮",
@@ -1017,13 +1041,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Action、Massively Multiplayer",
-      "publisher": "深圳市爱玩游戏科技有限公司",
-      "image": "https://media.rawg.io/media/screenshots/8b8/8b8a7a31a977283b35057f296d83b2a7.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "294151",
-      "rawgSlug": "jiu-jie-qu-zu-zhou-zhi-di-ninetrials-test-server",
-      "released": "2019-02-28"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "lovers in a dangerous spacetime",
@@ -1031,13 +1055,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Action、Shooter、Simulation、Indie",
-      "publisher": "Asteroid Base",
-      "image": "https://media.rawg.io/media/games/b47/b47da312357f548ceeb3a4d00021cd1d.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "2822",
-      "rawgSlug": "lovers-in-a-dangerous-spacetime",
-      "released": "2015-09-08"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "超級雞馬",
@@ -1046,12 +1070,12 @@
       ],
       "format": "數位",
       "genre": "",
-      "publisher": "bearbearking",
-      "image": "https://media.rawg.io/media/screenshots/513/5131002683ad4ecf82e97a090ac63862.jpg",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "723912",
-      "rawgSlug": "chao-ji-tian-shi-qie",
-      "released": "2022-01-14"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "sports party",
@@ -1060,12 +1084,12 @@
       ],
       "format": "數位",
       "genre": "",
-      "publisher": "Ubisoft Entertainment",
+      "publisher": "",
       "image": "",
       "note": "",
-      "rawgId": "249382",
-      "rawgSlug": "sports-party",
-      "released": "2018-10-30"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "NBA 2K19",
@@ -1073,13 +1097,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Action、Simulation、Sports",
-      "publisher": "2K Games",
-      "image": "https://media.rawg.io/media/games/442/442792baf387bad3b99041be74276ba2.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "59602",
-      "rawgSlug": "nba-2k19-2",
-      "released": "2018-09-07"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "海賊無雙3",
@@ -1087,13 +1111,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Action",
-      "publisher": "Koei Tecmo Games",
-      "image": "https://media.rawg.io/media/screenshots/107/1075cb8c68fbcd1351af750bda8d8562.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "45186",
-      "rawgSlug": "warriors-all-stars",
-      "released": "2017-08-29"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "摩登原始人",
@@ -1101,13 +1125,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Platformer",
-      "publisher": "PrimitiveTribeStudio",
-      "image": "https://media.rawg.io/media/screenshots/94e/94e11d91378e9373eff2511c493e48a4.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "577152",
-      "rawgSlug": "yuan-shi-ren-xiao-you-xi",
-      "released": "2021-03-24"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "The Stretchers擔架搭檔",
