@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T20:13:54.423Z",
+  "updatedAt": "2026-10-26T22:09:55.777Z",
   "count": 135,
   "missingTitles": [],
   "games": [
@@ -1199,13 +1199,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Strategy",
-      "publisher": "Zen Studios",
-      "image": "",
+      "genre": "Adventure、Casual、Indie",
+      "publisher": "AGM PLAYISM",
+      "image": "https://media.rawg.io/media/screenshots/81f/81fdba3ff6717676332e393c5d1fce1f.jpg",
       "note": "",
-      "rawgId": "244736",
-      "rawgSlug": "castlestorm-definitive-edition",
-      "released": "2014-09-23"
+      "rawgId": "48983",
+      "rawgSlug": "misao-definitive-edition",
+      "released": "2017-10-25"
     },
     {
       "title": "Super Mega Baseball 2: Ultimate Edition",
