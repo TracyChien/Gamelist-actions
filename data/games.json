@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-10-30T21:52:14.225Z",
+  "updatedAt": "2026-10-31T20:51:55.794Z",
   "count": 135,
-  "missingTitles": [],
+  "missingTitles": [
+    "星之卡比 Wii 豪華版",
+    "霍格華茲的傳承",
+    "薩爾達傳說 王國之淚",
+    "皮克敏4",
+    "Everybody 1-2Swich!",
+    "喵咪鬥惡龍 1+2 合輯"
+  ],
   "games": [
     {
       "title": "over cooked 2",
@@ -639,13 +646,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Strategy、Puzzle",
-      "publisher": "Xin Peng",
-      "image": "https://media.rawg.io/media/screenshots/ab9/ab95d1d790865a6ecd2a05c65e1bb19a.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "252501",
-      "rawgSlug": "xiao-mie-xing-xing-popstarhao-hua-ban",
-      "released": "2018-08-18"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "霍格華茲的傳承",
@@ -653,13 +660,13 @@
         "PS5"
       ],
       "format": "實體",
-      "genre": "Adventure、RPG、Strategy、Indie",
-      "publisher": "英特衛多媒體股份有限公司Interwise Multimedia",
-      "image": "https://media.rawg.io/media/screenshots/28e/28e8a510d739b2c9bc516dd684bca8a9.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "729343",
-      "rawgSlug": "mi-wu-guo-du-chuan-cheng-myth-of-mistlegacy",
-      "released": "2022-01-27"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "薩爾達傳說 王國之淚",
@@ -667,13 +674,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "RPG",
-      "publisher": "SOFTSTAR Entertainment",
-      "image": "https://media.rawg.io/media/screenshots/dfe/dfee2efb376d889fd802bfb5dbca9f98.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "17521",
-      "rawgSlug": "the-gate-of-firmament",
-      "released": "2016-02-25"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "皮克敏4",
@@ -681,13 +688,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Action、Simulation",
-      "publisher": "THQ Nordic",
-      "image": "https://media.rawg.io/media/screenshots/127/127ceacacbacb62806111de4a797a1e4.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "16672",
-      "rawgSlug": "comanche-4",
-      "released": "2001-11-15"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "Everybody 1-2Swich!",
@@ -695,13 +702,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Family",
-      "publisher": "Nintendo",
-      "image": "https://media.rawg.io/media/screenshots/57f/57f52ac1794c3f290f630b939e1f2709.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "28025",
-      "rawgSlug": "1-2-switch",
-      "released": "2017-03-03"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "喵咪鬥惡龍 1+2 合輯",
@@ -709,13 +716,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Family",
-      "publisher": "Nintendo",
-      "image": "https://media.rawg.io/media/screenshots/57f/57f52ac1794c3f290f630b939e1f2709.jpg",
+      "genre": "",
+      "publisher": "",
+      "image": "",
       "note": "",
-      "rawgId": "28025",
-      "rawgSlug": "1-2-switch",
-      "released": "2017-03-03"
+      "rawgId": "",
+      "rawgSlug": "",
+      "released": ""
     },
     {
       "title": "狩魔師5-發條陰謀",
