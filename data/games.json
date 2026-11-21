@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T23:32:57.284Z",
+  "updatedAt": "2026-11-21T22:41:18.429Z",
   "count": 135,
   "missingTitles": [],
   "games": [
@@ -793,13 +793,13 @@
         "Switch"
       ],
       "format": "實體",
-      "genre": "Strategy",
-      "publisher": "Kalypso Media",
-      "image": "https://media.rawg.io/media/games/abc/abc14abd760982ce10c59837c6bde58d.jpg",
+      "genre": "Action、Adventure",
+      "publisher": "Nintendo",
+      "image": "https://media.rawg.io/media/screenshots/86e/86e39dfe67534014c8cd1863469e55bd.jpg",
       "note": "",
-      "rawgId": "327246",
-      "rawgSlug": "commandos-2-hd-remaster",
-      "released": "2020-01-23"
+      "rawgId": "983884",
+      "rawgSlug": "luigis-mansion-2-hd",
+      "released": "2024-06-27"
     },
     {
       "title": "薩爾達傳說 智慧的再現",
