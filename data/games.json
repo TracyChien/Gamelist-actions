@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T22:41:18.429Z",
+  "updatedAt": "2026-11-22T23:02:53.493Z",
   "count": 135,
   "missingTitles": [],
   "games": [
@@ -1199,13 +1199,13 @@
         "Switch"
       ],
       "format": "數位",
-      "genre": "Adventure、Casual、Indie",
-      "publisher": "AGM PLAYISM",
-      "image": "https://media.rawg.io/media/screenshots/81f/81fdba3ff6717676332e393c5d1fce1f.jpg",
+      "genre": "Action、Adventure、Platformer",
+      "publisher": "Microsoft Studios",
+      "image": "https://media.rawg.io/media/games/d76/d76bd51161884d729ceac7e98eacde80.jpg",
       "note": "",
-      "rawgId": "48983",
-      "rawgSlug": "misao-definitive-edition",
-      "released": "2017-10-25"
+      "rawgId": "486733",
+      "rawgSlug": "recore-definitive-edition-2",
+      "released": "2017-08-29"
     },
     {
       "title": "Super Mega Baseball 2: Ultimate Edition",
